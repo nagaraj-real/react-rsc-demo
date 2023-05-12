@@ -5,7 +5,7 @@ import { renderToPipeableStream } from 'react-dom/server';
 import App from "./api/components/App.js";
 const app = new express();
 
-app.use('/static', express.static('dist'))
+app.use('/static', express.static('build'))
 
 app.use('/home', (request, response) => {
   const { pipe } = renderToPipeableStream(<App />, {
@@ -18,4 +18,4 @@ app.use('/home', (request, response) => {
   });
 });
 
-app.listen(3001, () => { console.log('listening at 3001') })
+app.listen(3000, () => { console.log('listening at 3000') })

@@ -5,10 +5,12 @@
   "dependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/preset-react": "^7.18.6",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "react": "^18.3.0-canary-16d053d59-20230506",
-    "react-dom": "^18.3.0-canary-16d053d59-20230506",
-    "react-server-dom-webpack": "^18.3.0-canary-16d053d59-20230506"
+    "react": "18.3.0-next-1308e49a6-20230330",
+    "react-dom": "18.3.0-next-1308e49a6-20230330",
+    "react-error-boundary": "^3.1.4",
+    "react-server-dom-webpack": "^18.3.0-canary-df12d7eac-20230510"
   },
   "scripts": {
     "babel:build": "babel src --out-dir dist --extensions .ts,.js,.tsx,.jsx,.cjs,.mjs --presets=@babel/preset-env,@babel/preset-react",

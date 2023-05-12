@@ -9,9 +9,10 @@ const stylesHandler = "style-loader";
 const ReactServerWebpackPlugin = require("react-server-dom-webpack/plugin");
 
 const config = {
-  entry: "./src/index.jsx",
+  cache: false,
+  entry: "./src/bootstrap.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
   },
   plugins: [new ReactServerWebpackPlugin({ isServer: false })],
   resolve: {
@@ -22,12 +23,7 @@ const config = {
       {
         test: /\.(js|jsx)$/i,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
-        },
+        use: "babel-loader",
       },
       {
         test: /\.css$/i,
